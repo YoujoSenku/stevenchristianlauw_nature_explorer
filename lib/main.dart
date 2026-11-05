@@ -32,11 +32,12 @@ class HomeScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
           fontSize: 24,
         ),
-        backgroundColor: Color.from(alpha: 5, red: 0, green: 50, blue: 0),
+        backgroundColor: Colors.green[100],
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(
               'https://picsum.photos/id/10/200/300',
@@ -46,18 +47,21 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 6,),
             Text(
-                'Peaceful Natural Escape',
+                'A Peaceful Natural Escape',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 28,
+                  color: Colors.black,
                 ),
               ),
             SizedBox(height: 16,),
             Text(
               "Discover, Explorer, Reconnect",
               style: TextStyle(
-                  fontSize: 16,
+                fontSize: 20,
+                color: Colors.green[900],
+                fontWeight: FontWeight.bold
               ),
             ),
             SizedBox(height: 6,),
@@ -67,7 +71,7 @@ class HomeScreen extends StatelessWidget {
               'From quiet lakes to scenic trails, every journey offers a new experience. '
               'Let nature inspire your next adventure and create unforgettable memories along the way.',
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 14, color: Colors.black),
             ),
             SizedBox(height: 16,),
             SingleChildScrollView(
