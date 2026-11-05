@@ -35,29 +35,77 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Color.from(alpha: 5, red: 0, green: 50, blue: 0),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Image.network(
-                'https://picsum.photos/id/10/200/300',
-                width: double.infinity,
-                height: 250,
-                fit: BoxFit.cover,
-              ),
+            Image.network(
+              'https://picsum.photos/id/10/200/300',
+              width: double.infinity,
+              height: 250,
+              fit: BoxFit.cover,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
+            SizedBox(height: 6,),
+            Text(
                 'Peaceful Natural Escape',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
               ),
+            SizedBox(height: 16,),
+            Text(
+              "Discover, Explorer, Reconnect",
+              style: TextStyle(
+                  fontSize: 16,
+              ),
             ),
-            SizedBox(height: 8,),
+            SizedBox(height: 6,),
+            Text(
+              'Discover the beauty of nature through breathtaking landscapes, peaceful forests, and stunning mountain views. '
+              'Explore remarkable destinations, enjoy the fresh air, and reconnect with the natural world. '
+              'From quiet lakes to scenic trails, every journey offers a new experience. '
+              'Let nature inspire your next adventure and create unforgettable memories along the way.',
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 14),
+            ),
+            SizedBox(height: 16,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                      'https://picsum.photos/id/10/300/200',
+                      fit: BoxFit.cover,
+                      width: 150,
+                      height: 300,
+                    ),
+                  ),
+                  SizedBox(width: 16,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                      'https://picsum.photos/id/29/300/200',
+                      fit: BoxFit.cover,
+                      width: 150,
+                      height: 300,
+                    ),
+                  ),
+                  SizedBox(width: 16,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                      'https://picsum.photos/id/37/300/200',
+                      fit: BoxFit.cover,
+                      width: 150,
+                      height: 300,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
